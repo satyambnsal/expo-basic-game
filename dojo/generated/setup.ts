@@ -13,14 +13,14 @@ export type SetupResult = Awaited<ReturnType<typeof setup>>
 
 export async function setup({ ...config }: DojoConfig) {
   // torii client
-  const toriiClient = await createClient([], {
-    rpcUrl: config.rpcUrl,
-    toriiUrl: config.toriiUrl,
-    relayUrl: config.relayUrl,
-    worldAddress: config.manifest.world.address || '',
-  })
+  // const toriiClient = await createClient([], {
+  //   rpcUrl: config.rpcUrl,
+  //   toriiUrl: config.toriiUrl,
+  //   relayUrl: config.relayUrl,
+  //   worldAddress: config.manifest.world.address || '',
+  // })
 
-  // const toriiClient = null
+  const toriiClient = null
 
   // create contract components
   const contractComponents = defineContractComponents(world)

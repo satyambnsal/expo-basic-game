@@ -1,11 +1,11 @@
-import axios from 'axios'
-
 export async function fetchWasm(uri: string) {
-  const { data: bufferSource } = await axios({
-    url: uri,
-    method: 'get',
-    responseType: 'arraybuffer',
+  const response = await fetch(uri, {
+    method: 'GET',
+    headers: {
+      Accept: 'arrayBuffer',
+      'Content-Type': 'arrayBuffer',
+    },
   })
 
-  return bufferSource
+  return response.arrayBuffer()
 }

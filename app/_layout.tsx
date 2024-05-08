@@ -8,6 +8,7 @@ import { useColorScheme } from '@/hooks/useColorScheme'
 import { DojoContext } from '@/dojo/DojoContext'
 import { SetupResult, setup } from '@/dojo/generated/setup'
 import { dojoConfig } from '@/dojo/dojoConfig'
+import { useWasmHelloWorld } from '@/dojo/torii-wasm/useWasmHelloWorld'
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync()
